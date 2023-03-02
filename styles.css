@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: "Inter";
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+}
+
+div.container {
+    height: 90vh;
+    background: #fff;
+    margin: 1% 10%;
+    /* border: 2px solid cyan; */
+}
+
+/* Navigation Bar  */
+
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul.nav-links {
+    display: flex;
+}
+
+ul.nav-links li {
+    margin-left: 20px;
+    list-style: none;
+    text-decoration: none;
+}
+
+ul.nav-links li a {
+    text-decoration: none;
+    color: hsl(236, 13%, 42%);
+}
+
+ul.nav-links li a:hover {
+    transition: 0.3s ease;
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+/* Hero Section Grid  */
+
+section.grid-container {
+    display: grid;
+    height: 82vh;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-template-areas:
+    "image image news"
+    "title welcome news"
+    "story-1 story-2 story-3";
+    margin-top: 30px;
+    margin-bottom: 20px;
+    /* border: 2px solid red; */
+    
+}
+
+section.grid-container > img {
+    height: 275px;
+    width: 100%;
+    object-fit: cover;
+    grid-area: image;
+
+}    
+
+
+h1.title-text {
+    grid-area: title;
+    font-size: 2.8em;
+    /* font-size: .1em; */
+    height: 150px;
+    font-weight: 800;
+}
+
+div.welcome-container {
+    position: relative;
+    grid-area: welcome;
+    height: 150px;
+    color: hsl(236, 13%, 42%);
+}
+
+div.welcome-container button {
+    position: absolute;
+    bottom: 0;
+    padding: 10px 20px;
+    letter-spacing: 3px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+div.welcome-container button:hover {
+    cursor: pointer;
+}
+
+div.new-section {
+    position: relative;
+    grid-area: news;
+    height: 450px;
+    background: #000;
+    color: #fff;
+    overflow-y: auto;
+}
+
+div.margin {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* div.margin > div {
+    margin-top: 30px;
+} */
+
+div.margin > div > h3 {
+    margin-bottom: 5px;
+}
+
+div.margin > div.news > div > h3:hover {
+    transition: 0.3s ease;
+    color: hsl(35, 77%, 62%);
+    cursor: pointer;
+}
+
+div.margin div.new-1, 
+div.margin div.new-2 {
+    padding-bottom: 35px;
+    border-bottom: 2px solid hsl(236, 13%, 42%);
+}
+
+div.margin div.new-2, 
+div.margin div.new-3 {
+    margin-top: 25px;
+}
+
+div.new-header {
+    position: sticky;
+    top: 0;
+    padding-top: 25px;
+    height: 45px;
+    background: #000;
+    z-index: 10;
+}
+
+div.new-section h2 {
+    color: hsl(35, 77%, 62%);
+    /* padding-top: 25px; */
+    height: 45px;
+    font-size: 2em;
+    background: #000;
+    z-index: 10;
+}
+
+div.news {
+    padding-top: 40px;
+    
+}
+
+div.story-1 > div > img,
+div.story-2 > div > img,
+div.story-3 > div > img {
+    height: 100%;
+    width: 100%;
+}
+
+div.story-1 > div > img:hover,
+div.story-2 > div > img:hover,
+div.story-3 > div > img:hover {
+    cursor: pointer;
+}
+
+div.image-1 {
+    margin-right: 10px;
+}
+
+div.story-1 {
+    margin-top: 5px;
+    display: flex;
+    grid-area: story-1;
+    height: 110px;
+}
+
+div.story-2 {
+    margin-top: 5px;
+    display: flex;
+    grid-area: story-2;
+    height: 110px;
+}
+
+div.story-3 {
+    margin-top: 5px;
+    display: flex;
+    grid-area: story-3;
+    height: 110px;
+}
+
+div.text-container > p {
+    font-size: .9em;
+}
+
+div.text-container > h3 {
+    margin-bottom: 10px;
+    color:hsl(233, 8%, 79%);
+    font-size: 2em;
+}
+
+div.text-container > h4 {
+    margin-bottom: 10px;
+}
+
+/* Media Queries  */
+
+@media screen and (max-width: 1000px) {
+    section.grid-container {
+        grid-template-areas: repeat(2, 1fr);
+        grid-template-areas:
+        /* "image image news"
+        "title welcome news"
+        "story-1 story-2 story-3"; */
+        "image image"
+        "title news"
+        "welcome news"
+        "story-1 story-2"
+        "story-3";
+    }
+
+    
+}
+
+
+
+
+
+
+
+
